@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+
+
+
+        <h1>Join Today!!!</h1>
+        <br/><br/>
+    
+
+
+        <form method="POST" action="{% url 'home'%}" autocomplete="off">
+            {% csrf_token %}
+            <div class="mb-3">
+           
+                <input type="text" class="form-control" aria-describedby="emailHelp"placeholder="Enter First Name" name="fname" autocomplete="off">
+                
+            </div>
+
+            <div class="mb-3">
+           
+                    <input type="text" class="form-control" aria-describedby="emailHelp"placeholder="Enter Last Name" name="lname" autocomplete="off">
+                    
+                    </div>
+            <div class="mb-3">
+           
+                <input type="integer" class="form-control" aria-describedby="emailHelp"placeholder="Enter Your Age" name="age" autocomplete="off">
+                        
+            </div>
+
+            <div class="mb-3">
+           
+                <input type="email" class="form-control"  aria-describedby="emailHelp"placeholder="Enter Email" name="email" autocomplete="off">
+                
+            </div>
+
+            <div class="mb-3">
+            
+                <input type="password" class="form-control"placeholder="Enter Password" name="passwd" autocomplete="off">
+                
+            </div>
+            <br/>
+            
+            <button type="submit" class="btn btn-primary ">Sign Up</button>
+        </form>
+
+        <div style="padding-top: 20px">
+            <a class="btn btn-secondary" href="{% url 'list' %}" role="button">View Members</a>
+        </div>
+        
+    
+   
+{% endblock %} 
